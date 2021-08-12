@@ -1,0 +1,98 @@
+{% extends 'base_fdo.html' %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+<!-- <h1>
+    Welcome, front desk officer
+</h1>
+<a href="{% url 'sellticket' %}">SELL TICKET</a>
+<a href="{% url 'cancelticket' %}">CANCEL TICKET</a> -->
+<!-- <h1>
+    Welcome, admin
+</h1> -->
+<!-- <a href="{% url 'addevent' %}">ADD EVENT</a>
+<a href="{% url 'deleteevent' %}">DELETE EVENT</a> -->
+<!-- <button type="button" class="btn btn-primary btn-sm">Small</button> -->
+<!-- SLIDESHOW -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <!-- <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+    </ul> -->
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img style="width:1920px;height:500px" src="/static/MIRAS/arts1.png">
+        </div>
+        <div class="carousel-item">
+            <img style="width:1920px;height:500px" src="/static/MIRAS/arts2.png">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+</div>
+
+<div class="container">
+    <h2 style="font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 100px; text-shadow: -4px 5px 4px rgba(0, 0, 0, 0.25);">UPCOMING EVENTS</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <!-- <th></th>
+                <th></th>
+                <th></th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="font-style: normal;font-weight: bold;font-size: 40px;line-height: 65px;">24 April</td>
+                <td style="font-style: normal;font-weight: 300;font-size: 30px;line-height: 65px;">Oil In All
+                    Forms Chelsea Brown</td>
+                <td style="font-style: normal;
+                font-weight: 300;
+                font-size: 30px;
+                line-height: 54px;">
+                <a href = "{% url 'sellticket' %}"><button style = "padding-left: 5%; padding-right: 5%;" type="button" class="btn btn-outline-secondary">Sell Ticket</button></a>
+                <a href = "{% url 'cancelticket' %}"><button  style = "padding-left: 5%; padding-right: 5%;" type="button" class="btn btn-outline-secondary">Cancel Ticket</button></a></td>
+            </tr> 
+            <tr>
+                <td style="font-style: normal;font-weight: bold;font-size: 40px;line-height: 65px;">24 April</td>
+                <td style="font-style: normal;font-weight: 300;font-size: 30px;line-height: 65px;">Oil In All
+                    Forms Chelsea Brown</td>
+                <td style="font-style: normal;
+                font-weight: 300;
+                font-size: 30px;
+                line-height: 54px;">
+                <a href = "{% url 'sellticket' %}"><button style = "padding-left: 5%; padding-right: 5%;" type="button" class="btn btn-outline-secondary">Sell Ticket</button></a>
+                <a href = "{% url 'cancelticket' %}"><button  style = "padding-left: 5%; padding-right: 5%;" type="button" class="btn btn-outline-secondary">Cancel Ticket</button></a></td>
+            </tr>
+            <tr>
+                <td style="font-style: normal;font-weight: bold;font-size: 40px;line-height: 65px;">24 April</td>
+                <td style="font-style: normal;font-weight: 300;font-size: 30px;line-height: 65px;">Oil In All
+                    Forms Chelsea Brown</td>
+                <td style="font-style: normal;
+                font-weight: 300;
+                font-size: 30px;
+                line-height: 54px;">
+                <a href = "{% url 'sellticket' %}"><button style = "padding-left: 5%; padding-right: 5%;" type="button" class="btn btn-outline-secondary">Sell Ticket</button></a>
+                <a href = "{% url 'cancelticket' %}"><button  style = "padding-left: 5%; padding-right: 5%;" type="button" class="btn btn-outline-secondary">Cancel Ticket</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

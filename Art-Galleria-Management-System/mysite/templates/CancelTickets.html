@@ -1,0 +1,41 @@
+{% extends 'base_fdo.html' %}
+
+{% block title %}CANCEL TICKET{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="bg-contact2" style="background-image: url('/static/Event_img.jpg')">
+        <div class="main">
+            <center>
+                <form id="contact" action="{% url 'cancelticket' %}" , method="post">
+                    {% csrf_token %}
+                    <!-- used to keep forms safe from hackers or smth like that-->
+                    &nbsp; &nbsp;
+                    <h1>Cancel Ticket</h1>
+                    <table>
+                        {% for field in form %}
+                        <tr>
+                            <th>
+                                <label for="{{field.id_for_label}}" class="label">
+                                    {% if field.html_name == 'ticketid' %}
+                                    Ticket ID
+                                    {% endif %}
+                                </label>
+                            <th>
+                            <th>{{field}}</th>
+                            <br>
+
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <br>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <button class="button1" type="submit">Cancel Ticket</button>
+                    <br>
+                </form>
+        </div>
+    </div>
+</body>
+{% endblock %}
