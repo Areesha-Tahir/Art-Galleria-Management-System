@@ -2,9 +2,9 @@
 
 Its a management system designed for the employees of MIRAS (Art Gallery). 
 
-Backend : Django
+Backend : Python
 
-Frontend : HTML and CSS
+Frontend : Django 
 
 Database : MongoDB
 
