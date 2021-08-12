@@ -1,0 +1,42 @@
+{% extends 'base_fdo.html' %}
+
+{% block title %}Edit Tickets{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="bg-contact2" style="background-image: url('/static/Event_img.jpg')">
+        <div class="main">
+            <center>
+                <form id="contact" action="{% url 'EditTickets' %}" , method="post">
+                    {% csrf_token %}
+                    <!-- used to keep forms safe from hackers or smth like that-->
+                    <table>
+                        <h1>Edit Tickets</h1>
+                        {% for field in form %}
+                        <tr>
+                            <th>
+                                <label for="{{field.id_for_label}}" class="label">
+                                    {% if field.html_name == 'tcktid' %}
+                                    Ticket ID
+                                    {% elif field.html_name == 'typeofticket' %}
+                                    Type of Ticket
+                                    {% elif field.html_name == 'seatnum' %}
+                                    Seat #
+                                    {% endif %}
+                                </label>
+                            </th>
+                            <th>{{field}}</th>
+                            <br>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <button class="button1" type="submit">EDIT</button>
+
+                </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

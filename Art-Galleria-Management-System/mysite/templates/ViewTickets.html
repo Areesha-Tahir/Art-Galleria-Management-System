@@ -1,0 +1,68 @@
+{% extends 'base_fdo.html' %}
+
+{% block title %}VIEW TICKETS{% endblock %}
+
+{% block content %}
+<style>
+.viewtickets{
+    border-collapse: collapse;
+    font-weight: lighter;
+}
+</style>
+
+<body>
+    <div class="bg-contact2" style="background-image: url('/static/Event_img.jpg')">
+        <div class="main">
+            <center>
+                <form id="contact" action="{% url 'ViewTickets' %}" , method="post">
+                    {% csrf_token %}
+                    <!-- used to keep forms safe from hackers or smth like that-->
+                    &nbsp; &nbsp;
+                    <h1>View Tickets</h1>
+                    <table>
+                        {% for field in form %}
+                        <tr>
+                            {% if field.html_name == 'tcktid' %}
+                            <th>
+                                <label for="{{field.id_for_label}}" class="label">
+                                    EVENT ID
+                                </label>
+                            </th>
+                            <th>{{field}}</th>
+                            {% endif %}
+
+                            {% if field.html_name == 'tckts' %}
+                                {% for radio in field %}
+                                <th>
+                                    <label for="{{ radio.id_for_label }}">
+                                        {{ radio.choice_label }}
+                                        <span class="radio">{{ radio.tag }}</span>
+                                    </label>
+                                </th>
+                                {% endfor %}
+                            {% endif %}
+
+                            <br>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <br>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <button class="button1" type="submit" >View</button>
+                    <br>
+                    <br>
+                    <table class = "viewtickets" >
+                        {% for each in msg %}
+                           <tr>
+                               {% for each2 in each %}
+                                    <th> {{each2}} </th>
+                               {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

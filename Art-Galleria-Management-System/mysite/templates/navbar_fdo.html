@@ -1,0 +1,35 @@
+{% load static %}
+<style>
+    a:link {
+        color: pink;
+    }
+
+    a:hover {
+        color: pink;
+
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg" style="background-color: #416D49">
+    <!-- Brand -->
+    <img src="{% static 'MIRAS/miraslogo.jpg' %}" alt="" width="45" height="45" />
+    <a class="navbar-brand"
+        style="font-family:Playfair Display;font-style: normal;font-size: 40px;left: 5.5%;color: #E4C2BC;padding: 2px 5px"
+        href="#">Hello FDO</a>
+    <!-- <project_name>Hello Admin</project_name> -->
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto" style="overflow:hidden; float:right">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'homefdo' %}">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'sellticket' %}">SELL TICKET</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'cancelticket' %}">CANCEL TICKET</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">LOG OUT</a>
+        </li>
+    </ul>
+</nav>

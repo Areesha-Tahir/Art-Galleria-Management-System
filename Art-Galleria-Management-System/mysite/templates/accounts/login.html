@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<style>
+    .button1 {
+        background-color: #416D49;
+        color: white;
+        padding-left: 17%;
+        padding-right: 17%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border: none;
+        display: inline-block;
+        border-radius: 2%;
+        font-family: Poppins;
+        border-radius: 8px;
+    }
+
+    .button1:hover {
+        background-color: #FFFF;
+        color: #416D49;
+        border: 2px solid #416D49;
+    }
+
+    .label {
+        font-family: poppins;
+    }
+</style>
+<html>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+<body>
+    <img src="{% static 'MIRAS/login_green.png' %}" alt=""
+        style="float:left; width: 52%; height: 100%; margin-left: -2%; margin-top: -2%;" />
+    <h1 style="padding-top: 16% ;padding-left: 55%;font-family: Poppins;font-size: 30px;">Log In</h1>
+    <!-- <form action = "{% url 'homeadmin' %}", method = "post" style = "padding-left: 55%;"> -->
+    <form action="" , method="post" style="padding-left: 55%;">
+
+        {% csrf_token%}
+        <!-- used to keep forms safe from hackers or smth like that-->
+        {% for field in form %}
+        <label for="{{field.id_for_label}}" class="label">{{field.html_name}}:&nbsp;&nbsp;</label>
+        {{field}}
+        {% endfor %}
+        <br><br>
+        <button class="button1" type="submit">Sign In</button>
+        <!-- <button type="button" class="btn btn-success btn-lg">Sign In</button> -->
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{% extends 'base_admin.html' %}
+
+{% block title %}Edit Event{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="bg-contact2" style="background-image: url('/static/Event_img.jpg')">
+        <div class="main">
+            <center>
+                <form id="contact" action="{% url 'EditEventInfo' %}" , method="post">
+                    {% csrf_token %}
+                    <!-- used to keep forms safe from hackers or smth like that-->
+                    <h1>Edit Event Information</h1>
+                    <table>
+                        {% for field in form %}
+                        <tr>
+                            <th>
+                                <label for="{{field.id_for_label}}" class="label">
+                                    {% if field.html_name == 'evid' %}
+                                    Event ID
+                                    {% else %}
+                                    {{field.html_name}}
+                                    {% endif %}
+                                </label>
+                            </th>
+                            <th>{{field}}</th>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <button class="button1" type="submit">EDIT</button>
+                    <br>
+                </form>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
