@@ -6,7 +6,8 @@ from ..businesslogic import classes
     
 def database_connection():
     #SETTING UP DATABASE
-    client = MongoClient("mongodb+srv://aleezeh:1234@cluster0.nhmcd.mongodb.net/SE?retryWrites=true&w=majority")
+    #client = MongoClient("mongodb+srv://<username>:<password>@cluster0.nhmcd.mongodb.net/SE?retryWrites=true&w=majority")
+    #Here instead of <username> write your mongoDB atlas username and instead of <password> write the corresponding password for your account
     db = client["SE"]
 
     client.close()
