@@ -1,13 +1,13 @@
-# Art-Galleria-Management-System
+# Art Galleria Management System
 
-Its a management system designed for the employees of MIRAS (Art Gallery). 
+🎨 Its a management system designed for the employees of MIRAS (Art Gallery). 
 
-Backend : Python
+💻 Backend : Python
 
-Frontend : Django 
+📱 Frontend : Django 
 
-Database : MongoDB Atlas
+🏬 Database : MongoDB Atlas
 
 Feel free to add any comments
 
-If you have any queries email me at areeshatahir17@gmail.com
+If you have any queries email me at **areeshatahir17@gmail.com**
