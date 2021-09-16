@@ -10,4 +10,6 @@
 
 Feel free to add any comments
 
-If you have any queries email me at **areeshatahir17@gmail.com**
+If you have any you can queries email us at:
+* areeshatahir17@gmail.com
+* aleezehusman2000@gmail.com
