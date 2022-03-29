@@ -4,7 +4,7 @@
 
 💻 Backend : Python
 
-📱 Frontend : Django 
+📱 Frontend : HTML/CSS with Django
 
 🏬 Database : MongoDB Atlas
 
